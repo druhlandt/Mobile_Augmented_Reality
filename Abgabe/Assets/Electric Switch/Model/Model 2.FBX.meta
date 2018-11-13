@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: 758c88b7b60ce2246a349957ab17cd35
+timeCreated: 1520172489
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Cone001
+    100004: Cone002
+    100006: Cone003
+    100008: Cone004
+    100010: Cone006
+    100012: Cone007
+    100014: Light
+    100016: Light001
+    100018: Light002
+    100020: Light003
+    100022: Light004
+    100024: Light005
+    100026: Light006
+    100028: Light007
+    100030: Light008
+    100032: Light009
+    100034: Loft001
+    100036: Loft002
+    100038: //RootNode
+    100040: Plane001
+    100042: Stm_button01
+    400000: Box001
+    400002: Cone001
+    400004: Cone002
+    400006: Cone003
+    400008: Cone004
+    400010: Cone006
+    400012: Cone007
+    400014: Light
+    400016: Light001
+    400018: Light002
+    400020: Light003
+    400022: Light004
+    400024: Light005
+    400026: Light006
+    400028: Light007
+    400030: Light008
+    400032: Light009
+    400034: Loft001
+    400036: Loft002
+    400038: //RootNode
+    400040: Plane001
+    400042: Stm_button01
+    2300000: Box001
+    2300002: Cone001
+    2300004: Cone002
+    2300006: Cone003
+    2300008: Cone004
+    2300010: Cone006
+    2300012: Cone007
+    2300014: Light
+    2300016: Light001
+    2300018: Light002
+    2300020: Light003
+    2300022: Light004
+    2300024: Light005
+    2300026: Light006
+    2300028: Light007
+    2300030: Light008
+    2300032: Light009
+    2300034: Loft001
+    2300036: Loft002
+    2300038: Plane001
+    3300000: Box001
+    3300002: Cone001
+    3300004: Cone002
+    3300006: Cone003
+    3300008: Cone004
+    3300010: Cone006
+    3300012: Cone007
+    3300014: Light
+    3300016: Light001
+    3300018: Light002
+    3300020: Light003
+    3300022: Light004
+    3300024: Light005
+    3300026: Light006
+    3300028: Light007
+    3300030: Light008
+    3300032: Light009
+    3300034: Loft001
+    3300036: Loft002
+    3300038: Plane001
+    4300000: Box001
+    4300002: Cone001
+    4300004: Cone002
+    4300006: Cone003
+    4300008: Cone004
+    4300010: Light
+    4300012: Light001
+    4300014: Light002
+    4300016: Light003
+    4300018: Light004
+    4300020: Light005
+    4300022: Light006
+    4300024: Light007
+    4300026: Light008
+    4300028: Light009
+    4300030: Plane001
+    4300032: Loft001
+    4300034: Loft002
+    4300036: Cone006
+    4300038: Cone007
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02 - Default
+    second: {fileID: 2100000, guid: 96e29ac4f4ed8da42a517c2885dbc5c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 47d47c76a82070347b99e78b88a273ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 51f53011995181f4696b889478c27cd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _portalbutton01___Default
+    second: {fileID: 2100000, guid: a5ddcb5b1dcabfd479d87dcbfd2ec790, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

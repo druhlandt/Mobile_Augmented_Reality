@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: ElectricWave_Wave2
+  m_Shader: {fileID: 4800000, guid: a1b902baeac4b6b4a85967bff75db547, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BGTex:
+        m_Texture: {fileID: 2800000, guid: 9d3a878cd2ed34c4c8952c17c1c48efb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GrowTex:
+        m_Texture: {fileID: 2800000, guid: 253a2d3286453ee498d6cc8cd948005f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 3f91d48e889c39a4f8bc6404fd34d0d9, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noise:
+        m_Texture: {fileID: 2800000, guid: 2b45a968586c30f41b3b3a13bad7ff5f, type: 3}
+        m_Scale: {x: 50, y: 50}
+        m_Offset: {x: 1, y: 0}
+    m_Floats:
+    - _BumpAmt: 10
+    - _GlowIntensity: 5
+    - _GlowSpread: 5
+    - _Point1: 0.8
+    - _Point2: 4
+    - _Size: 0.58
+    - _SparkDist: -0.1
+    - _SparkMag: 15
+    - _SparkWidth: 0.298
+    - _StartSeed: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ObjectScale: {r: 1, g: 1, b: 1, a: 1}
+    - _color: {r: 0, g: 1, b: 0.048275948, a: 1}
