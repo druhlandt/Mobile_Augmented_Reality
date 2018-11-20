@@ -97,8 +97,13 @@ public class PinCodeControl : MonoBehaviour {
 		GameObjDisplayText.text = newText;
 	}
 
-	// an input was made, add it to the input value
-	public void addKeyInput(string key){
+    public string getText()
+    {
+        return GameObjDisplayText.text;
+    }
+
+    // an input was made, add it to the input value
+    public void addKeyInput(string key){
 		if (lockDownActive) {
 			UpdateText(DisplayAlert);
 			return;

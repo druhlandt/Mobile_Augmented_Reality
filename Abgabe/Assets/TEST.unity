@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 743206495}
   - component: {fileID: 743206494}
   m_Layer: 5
-  m_Name: countdownText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,9 +554,12 @@ MonoBehaviour:
   efxSource: {fileID: 583257878}
   lowPitchRange: 0.95
   highPitchRange: 1.05
-  nextSound: {fileID: 8300000, guid: 598527aae066f3c4d852fdcd4add0dc4, type: 3}
-  backSound: {fileID: 8300000, guid: 2c0bbddd7284c8c43952e23bf5ee5670, type: 3}
-  sortSound: {fileID: 8300000, guid: 70979a183bb25044b8919dc72f641daf, type: 3}
+  gameOver: {fileID: 8300000, guid: 5b64eb20e5f8b9049aab09bf130bae02, type: 3}
+  failure: {fileID: 8300000, guid: 961973b2a1595c94b9776dfcff8a4388, type: 3}
+  secBeep: {fileID: 8300000, guid: 8bcd9c026c997fd40961cbea7e63861c, type: 3}
+  start: {fileID: 8300000, guid: 4adf1f565610fad40bbb1d36804a9e1c, type: 3}
+  win: {fileID: 8300000, guid: f7e37aa2430420c42b567c16c54d28e2, type: 3}
+  raise: {fileID: 8300000, guid: 4c22f2621af94b242983912dd09cc36f, type: 3}
 --- !u!114 &1716021195
 MonoBehaviour:
   m_ObjectHideFlags: 0
