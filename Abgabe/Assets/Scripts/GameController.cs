@@ -53,8 +53,8 @@ public class GameController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //CheckTimer();
-        String actualTime = string.Format("{0}:{1}", TimeSpan.FromMilliseconds(timer).TotalMinutes, TimeSpan.FromMilliseconds(timer).TotalSeconds);
-        doorlock.UpdateText(actualTime);
+        //String actualTime = string.Format("{0}:{1}", TimeSpan.FromMilliseconds(timer).TotalMinutes, TimeSpan.FromMilliseconds(timer).TotalSeconds);
+        //doorlock.UpdateText(actualTime);
 
         if (Input.GetMouseButtonDown(0))        //TESTFUNKTION
         {

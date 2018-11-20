@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E5C00A68-E6DB-FEA3-938C-F34D364EA738}</ProjectGuid>
+    <ProjectGuid>{3295CDF8-3FBB-B6BB-47C4-DE408BE3EC89}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -63,7 +63,6 @@
      <Compile Include="Assets\Electric Wave Puzzle\Script\ElectricWave_ClickObjectWheel.cs" />
      <Compile Include="Assets\Electric Wave Puzzle\Script\ElectricWave_GameSample.cs" />
      <Compile Include="Assets\Electric Wave Puzzle\Script\ElectricWavePuzzle.cs" />
-     <Compile Include="Assets\Fuse Box System\CountdownTimer.cs" />
      <Compile Include="Assets\Fuse Box System\PackageAssets\Scripts\AudioManager_Fuse.cs" />
      <Compile Include="Assets\Fuse Box System\PackageAssets\Scripts\FuseController.cs" />
      <Compile Include="Assets\Fuse Box System\PackageAssets\Scripts\InventoryController_Fuse.cs" />
@@ -73,9 +72,9 @@
      <Compile Include="Assets\PinLockDoor\Scripts\DoorControl.cs" />
      <Compile Include="Assets\PinLockDoor\Scripts\ILockable.cs" />
      <Compile Include="Assets\PinLockDoor\Scripts\PinCodeControl.cs" />
-     <Compile Include="Assets\Recognizer.cs" />
      <Compile Include="Assets\Scripts\Box.cs" />
      <Compile Include="Assets\Scripts\ButtonsPuzzle.cs" />
+     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
      <Compile Include="Assets\Scripts\ElectricWPuzzle.cs" />
      <Compile Include="Assets\Scripts\FuseCollission.cs" />
      <Compile Include="Assets\Scripts\FusePuzzle.cs" />
@@ -83,22 +82,22 @@
      <Compile Include="Assets\Scripts\Paper.cs" />
      <Compile Include="Assets\Scripts\PaperPuzzle.cs" />
      <Compile Include="Assets\Scripts\Puzzle.cs" />
+     <Compile Include="Assets\Scripts\SoundController.cs" />
+     <Compile Include="Assets\Scripts\SpeechRecognizer.cs" />
      <Compile Include="Assets\Scripts\SwitchPuzzle.cs" />
      <Compile Include="Assets\Scripts\WinScript.cs" />
-     <Compile Include="Assets\SoundTest.cs" />
-     <Compile Include="Assets\TestMethoden.cs" />
      <None Include="Assets\Electric Wave Puzzle\Shader\Wave.shader" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/test/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/test/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/test/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/test/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
