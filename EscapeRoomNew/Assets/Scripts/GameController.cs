@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour {
     private bool bStart;
     private bool win;
     private SoundController sc;
+    private bool pause;
     #endregion
 
     KeywordRecognizer keywordRecognizer;
@@ -60,18 +61,26 @@ public class GameController : MonoBehaviour {
         //StartPauseTimer();
         sc = GetComponent<SoundController>();
         currentTime = startingTime;
-        bStart = win = false;
+        bStart = win = pause = false;
 
         keywords.Add("Next", () => {
             StartNextPuzzle();
         });
 
         keywords.Add("Pause", () => {
-            StartPauseTimer();
+            if (!pause)
+            {
+                StartPauseTimer();
+                pause = !pause;
+            }
         });
 
         keywords.Add("Anti Pause", () => {
-            StartPauseTimer();
+            if (pause)
+            {
+                StartPauseTimer();
+                pause = !pause;
+            }
         });
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += KeywordReconizeOnPhraseReconized;
@@ -90,16 +99,15 @@ public class GameController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        //CheckTimer();
-        //String actualTime = string.Format("{0}:{1}", TimeSpan.FromMilliseconds(timer).TotalMinutes, TimeSpan.FromMilliseconds(timer).TotalSeconds);
-        //doorlock.UpdateText(actualTime);
+   
+        win = CheckWinCondition();
+        CheckTimer();
 
         if (Input.GetMouseButtonDown(0))        //TESTFUNKTION
         {
             print("click");
-            StartNextPuzzle();
-            win = CheckWinCondition();
-            CheckTimer();
+            StartNextPuzzle(); 
+            sc.PlayClip(sc.failure);
         }
 	}
 
@@ -125,7 +133,7 @@ public class GameController : MonoBehaviour {
 
     public void StartPauseTimer()
     {
-        doorlock.UpdateText(getTime());
+        //doorlock.UpdateText(getTime());
         bStart = !bStart;
         sc.PlayClip(sc.start);
     }
@@ -160,7 +168,7 @@ public class GameController : MonoBehaviour {
 
     private void DecreaseTimer()
     {
-        currentTime -= 10;
+        currentTime -= timeToDecrease;
         sc.PlayClip(sc.failure);
     }
 
@@ -178,13 +186,11 @@ public class GameController : MonoBehaviour {
             if (currentTime >= 0)
             {
                 currentTime -= 1 * Time.deltaTime;
-                doorlock.UpdateText(getTime());
-                print(getTime());
+                //doorlock.UpdateText(getTime());
             }
             else
             {
-                doorlock.UpdateText("Game Over");
-                print("Game Over");
+                //doorlock.UpdateText("Game Over");
                 GameOver();
                 sc.PlayClip(sc.gameOver);
             }
