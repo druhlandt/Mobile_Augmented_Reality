@@ -88,16 +88,16 @@
      <Compile Include="Assets\Scripts\WinScript.cs" />
      <None Include="Assets\Electric Wave Puzzle\Shader\Wave.shader" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/danie/OneDrive/Documents/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/danie/OneDrive/Documents/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/danie/OneDrive/Documents/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/danie/OneDrive/Documents/Master-Hochschule_Bremen/Mobile_Augmented_Reality/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/danie/OneDrive/Documents/Mobile_Augmented_Reality/Abgabe/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

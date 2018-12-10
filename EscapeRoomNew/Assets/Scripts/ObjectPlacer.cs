@@ -18,9 +18,13 @@ public class ObjectPlacer : MonoBehaviour
     private bool _timeToHideMesh;
     private BoxDrawer _boxDrawing;
 
+    private GameController gc;
+
     // Use this for initialization
     void Start()
     {
+        gc = GetComponent<GameController>();
+
         if (DrawDebugBoxes)
         {
             _boxDrawing = new BoxDrawer(gameObject);
@@ -68,6 +72,7 @@ public class ObjectPlacer : MonoBehaviour
         if (DrawBuildings)
         {
             queries.AddRange(AddBuildings());
+            gc.StartPauseTimer();
         }
 
         if (DrawTrees)

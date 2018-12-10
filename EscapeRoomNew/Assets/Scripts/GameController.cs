@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows.Speech;
+using System.Linq;
 
 public class GameController : MonoBehaviour {
     public static GameController instance;
@@ -13,15 +15,23 @@ public class GameController : MonoBehaviour {
     #endregion
 
     #region Time configuration
-    [SerializeField] public float playTime;
-    [SerializeField] public int timeToDecrease;
+    [SerializeField] public float startingTime = 900f;
+    [SerializeField] public float timeToDecrease = 600f;
     #endregion
 
     #region private fields
-    [SerializeField] private float timer;
     [HideInInspector]
     [SerializeField] private int[] solution;
+
+    private float currentTime = 0f;
+    private int tmpSec = 999;
+    private bool bStart;
+    private bool win;
+    private SoundController sc;
     #endregion
+
+    KeywordRecognizer keywordRecognizer;
+    Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 
     void Awake()
     {
@@ -41,17 +51,45 @@ public class GameController : MonoBehaviour {
     void Start () {
         MakeSolution();
         //VoiceOver Ansage 1
-        SpawnBox();
+        //SpawnBox();
         //Warten auf Box
-        SpawnLock();
+        //SpawnLock();
         //Warten auf Lock
         //VoiceOver Ansage 2
-        
-        StartTimer();
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+        //StartPauseTimer();
+        sc = GetComponent<SoundController>();
+        currentTime = startingTime;
+        bStart = win = false;
+
+        keywords.Add("Next", () => {
+            StartNextPuzzle();
+        });
+
+        keywords.Add("Pause", () => {
+            StartPauseTimer();
+        });
+
+        keywords.Add("Anti Pause", () => {
+            StartPauseTimer();
+        });
+        keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
+        keywordRecognizer.OnPhraseRecognized += KeywordReconizeOnPhraseReconized;
+        keywordRecognizer.Start();
+    }
+
+    void KeywordReconizeOnPhraseReconized(PhraseRecognizedEventArgs args)
+    {
+        System.Action keywordAction;
+
+        if (keywords.TryGetValue(args.text, out keywordAction))
+        {
+            keywordAction.Invoke();
+        }
+    }
+
+    // Update is called once per frame
+    void Update () {
         //CheckTimer();
         //String actualTime = string.Format("{0}:{1}", TimeSpan.FromMilliseconds(timer).TotalMinutes, TimeSpan.FromMilliseconds(timer).TotalSeconds);
         //doorlock.UpdateText(actualTime);
@@ -60,13 +98,36 @@ public class GameController : MonoBehaviour {
         {
             print("click");
             StartNextPuzzle();
-        
+            win = CheckWinCondition();
+            CheckTimer();
         }
 	}
 
-    private void StartTimer()
+    private string getTime()
     {
-        //Irgendwas das Daniel macht
+        float min = currentTime / 60;
+        int tmp = (int)min;
+        int sec = (int)((currentTime) % 60);
+        if (sec != tmpSec && bStart)
+        {
+            sc.PlayClip(sc.secBeep);
+            tmpSec = sec;
+        }
+        if (sec > 9)
+        {
+            return tmp + "min " + sec + "s";
+        }
+        else
+        {
+            return tmp + "min 0" + sec + "s";
+        }
+    }
+
+    public void StartPauseTimer()
+    {
+        doorlock.UpdateText(getTime());
+        bStart = !bStart;
+        sc.PlayClip(sc.start);
     }
 
     private void GameOver()
@@ -83,20 +144,24 @@ public class GameController : MonoBehaviour {
     {
         doorlock.gameObject.SetActive(true);
         doorlock.SetCode(solution.ToString());
-        StartTimer();
+        StartPauseTimer();
     }
 
-    public void StartNextPuzzle()
+    public void StartNextPuzzle()//hiermit starten
     {
         if (!CheckWinCondition())
+        {
+            sc.PlayClip(sc.raise);
             box.SpawnNextPuzzle();
+        }
         else
             ;//WinScreen
     }
 
     private void DecreaseTimer()
     {
-        timer -= timeToDecrease;
+        currentTime -= 10;
+        sc.PlayClip(sc.failure);
     }
 
     private void MakeSolution()
@@ -108,8 +173,26 @@ public class GameController : MonoBehaviour {
 
     private void CheckTimer()
     {
-        if (timer <= 0)
-            GameOver();
+        if (bStart && !win)
+        {
+            if (currentTime >= 0)
+            {
+                currentTime -= 1 * Time.deltaTime;
+                doorlock.UpdateText(getTime());
+                print(getTime());
+            }
+            else
+            {
+                doorlock.UpdateText("Game Over");
+                print("Game Over");
+                GameOver();
+                sc.PlayClip(sc.gameOver);
+            }
+        }
+        else
+        {
+            //Hier kann was mit gewiinen hin
+        }
     }
 
     private void ShowNumber()
@@ -126,9 +209,8 @@ public class GameController : MonoBehaviour {
 
     public void PuzzleFail()
     {
-        //Failsound abspielen
         //Optisch verdeutlichen?
-
+        sc.PlayClip(sc.failure);
         DecreaseTimer();
     }
     
