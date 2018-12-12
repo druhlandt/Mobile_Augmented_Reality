@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.XR.WSA.Input;
+using HoloToolkit.Unity.InputModule;
+using System;
 
 public class RaycastManager_Fuse : MonoBehaviour
 {
@@ -20,6 +23,7 @@ public class RaycastManager_Fuse : MonoBehaviour
         fuseInv = GameObject.FindWithTag("FuseInventory").GetComponent<InventoryController_Fuse>();
     }
 
+
     void Update()
     {
         RaycastHit hit;
@@ -33,7 +37,7 @@ public class RaycastManager_Fuse : MonoBehaviour
                 CrosshairActive();
                 isCrosshairActive = true;
 
-                if (Input.GetKeyDown("e"))
+                if (Input.GetMouseButtonDown(0))
                 {
                     fuseInv.UpdateFuseUI();
                     AudioManager_Fuse.instance.Play("PickupSFX");
@@ -47,7 +51,7 @@ public class RaycastManager_Fuse : MonoBehaviour
                 CrosshairActive();
                 isCrosshairActive = true;
 
-                if (Input.GetKeyDown("e"))
+                if (Input.GetMouseButtonDown(0))
                 {
                     raycasted_obj.GetComponent<FuseController>().CheckFuseBox();
                 }
@@ -72,5 +76,20 @@ public class RaycastManager_Fuse : MonoBehaviour
     {
         uiCrosshair.color = Color.white;
         isCrosshairActive = false;
+    }
+
+    public void OnInputClicked(InputClickedEventData eventData)
+    {
+        if (eventData.selectedObject.gameObject.CompareTag("Fuse"))
+        {
+            fuseInv.UpdateFuseUI();
+            AudioManager_Fuse.instance.Play("PickupSFX");
+            eventData.selectedObject.gameObject.SetActive(false);
+        }
+
+        if (eventData.selectedObject.gameObject.CompareTag("Fuse"))
+        {
+            eventData.selectedObject.gameObject.GetComponent<FuseController>().CheckFuseBox();
+        }
     }
 }

@@ -32,7 +32,6 @@ using System.Collections;
 public class PinCodeControl : MonoBehaviour {
 	// Links to other relevant GameObjects
 	public Text GameObjDisplayText;
-	public GameObject GameObjDoor;
 
 	// settings - change it to your desire
 	public string lockCode = "1234";			// the code to unlock
@@ -60,12 +59,12 @@ public class PinCodeControl : MonoBehaviour {
 	private bool lockDownActive;
 	private const string ctrlCodeSubmit = "SUBMIT";
 	private const string ctrlCodeClear = "CLEAR";
-	private ILockable availableInterface;
+	
 
 	// Use this for initialization
 	void Start () {
 		// get the implemented interface from door gameobject
-		availableInterface = GameObjDoor.gameObject.GetComponent (typeof(ILockable)) as ILockable;
+		
 
 		inputCode = "";
 		failedAttempts = 0;
@@ -97,13 +96,8 @@ public class PinCodeControl : MonoBehaviour {
 		GameObjDisplayText.text = newText;
 	}
 
-    public string getText()
-    {
-        return GameObjDisplayText.text;
-    }
-
-    // an input was made, add it to the input value
-    public void addKeyInput(string key){
+	// an input was made, add it to the input value
+	public void addKeyInput(string key){
 		if (lockDownActive) {
 			UpdateText(DisplayAlert);
 			return;
@@ -138,7 +132,6 @@ public class PinCodeControl : MonoBehaviour {
 			UpdateText(DisplayDefault);
 			allowNewCode = false;
 			clearInput();
-			availableInterface.Lock();
 			return;
 		}
 
@@ -152,7 +145,6 @@ public class PinCodeControl : MonoBehaviour {
 				// failed attempt!
 				failedAttempts += 1;
 				allowNewCode = false;
-				availableInterface.Lock();
 				UpdateText(DisplayDenied);
 				if(failedAttempts >= maxAttempts){
 					// alert!
@@ -167,7 +159,6 @@ public class PinCodeControl : MonoBehaviour {
 				failedAttempts = 0;
 				allowNewCode = true;
 				UpdateText(DisplayGranted);
-				availableInterface.Unlock();
 				if(!noAudio)
 					AudioConfirm.Play ();
 			}

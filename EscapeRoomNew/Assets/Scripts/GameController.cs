@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows.Speech;
 using System.Linq;
+using HoloToolkit.Unity.SpatialMapping;
 
 public class GameController : MonoBehaviour {
     public static GameController instance;
 
     #region GameObjects to control
-    [SerializeField] public PinCodeControl doorlock;
-    [SerializeField] public Box box;
+    [SerializeField] public GameObject doorlock;
+    [SerializeField] public GameObject box;
     [SerializeField] public GameObject[] solvedPuzzles;
     #endregion
 
@@ -50,6 +51,8 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        box = GameObject.FindGameObjectWithTag("Box");
+        doorlock = GameObject.FindGameObjectWithTag("Pad");
         MakeSolution();
         //VoiceOver Ansage 1
         //SpawnBox();
@@ -64,7 +67,7 @@ public class GameController : MonoBehaviour {
         bStart = win = pause = false;
 
         keywords.Add("Next", () => {
-            StartNextPuzzle();
+            StartNextPuzzle(); //NEIN!!!!!!!!!!!!!!!!!!!!!!!!!!!
         });
 
         keywords.Add("Pause", () => {
@@ -82,9 +85,22 @@ public class GameController : MonoBehaviour {
                 pause = !pause;
             }
         });
+
+        keywords.Add("Move box", () => {
+            box.GetComponentInParent<TapToPlace>().enabled = true;
+        });
+
+        keywords.Add("Stop moving box", () => {
+            box.GetComponentInParent<TapToPlace>().enabled = false;
+        });
+
+        //KEYWORD UM TAPTOPLACE AN BOX AN UND AUS ZU SCHALTEN
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += KeywordReconizeOnPhraseReconized;
         keywordRecognizer.Start();
+
+        StartNextPuzzle();
+        StartPauseTimer();
     }
 
     void KeywordReconizeOnPhraseReconized(PhraseRecognizedEventArgs args)
@@ -133,9 +149,9 @@ public class GameController : MonoBehaviour {
 
     public void StartPauseTimer()
     {
-        //doorlock.UpdateText(getTime());
+        doorlock.GetComponent<PinCodeControl>().UpdateText(getTime());
         bStart = !bStart;
-        sc.PlayClip(sc.start);
+        //sc.PlayClip(sc.start);
     }
 
     private void GameOver()
@@ -151,7 +167,7 @@ public class GameController : MonoBehaviour {
     private void SpawnLock()
     {
         doorlock.gameObject.SetActive(true);
-        doorlock.SetCode(solution.ToString());
+        doorlock.GetComponent<PinCodeControl>().SetCode(solution.ToString());
         StartPauseTimer();
     }
 
@@ -160,10 +176,10 @@ public class GameController : MonoBehaviour {
         if (!CheckWinCondition())
         {
             sc.PlayClip(sc.raise);
-            box.SpawnNextPuzzle();
+            box.GetComponent<Box>().SpawnNextPuzzle();
         }
         else
-            ;//WinScreen
+            sc.PlayClip(sc.win);//WinScreen
     }
 
     private void DecreaseTimer()
@@ -186,11 +202,11 @@ public class GameController : MonoBehaviour {
             if (currentTime >= 0)
             {
                 currentTime -= 1 * Time.deltaTime;
-                //doorlock.UpdateText(getTime());
+                doorlock.GetComponent<PinCodeControl>().UpdateText(getTime());
             }
             else
             {
-                //doorlock.UpdateText("Game Over");
+                doorlock.GetComponent<PinCodeControl>().UpdateText("Game Over");
                 GameOver();
                 sc.PlayClip(sc.gameOver);
             }
@@ -208,7 +224,7 @@ public class GameController : MonoBehaviour {
             if (go.activeSelf)
             {
                 int nextNumber = Array.FindIndex(solvedPuzzles, x => x.Equals(go));
-                box.ShowNextNumber(solution[nextNumber]);
+                box.GetComponent<Box>().ShowNextNumber(solution[nextNumber]);
             }
         }
     }
@@ -227,6 +243,6 @@ public class GameController : MonoBehaviour {
             if (go.activeSelf)
                 solved++;
 
-        return solved == solvedPuzzles.Length;
+        return solved == box.GetComponent<Box>().puzzles.Length;
     }
 }

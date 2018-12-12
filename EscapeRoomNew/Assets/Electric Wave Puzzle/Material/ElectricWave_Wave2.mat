@@ -38,8 +38,8 @@ Material:
     - _BumpAmt: 10
     - _GlowIntensity: 5
     - _GlowSpread: 5
-    - _Point1: 0.4
-    - _Point2: 1
+    - _Point1: 0.7
+    - _Point2: 5
     - _Size: 0.58
     - _SparkDist: -0.1
     - _SparkMag: 15

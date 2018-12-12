@@ -1,9 +1,9 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <UnityWSASolutionName>EscapeRoomNew</UnityWSASolutionName>
-        <UnityWSASolutionDir>C:\Users\Manuel\Documents\Unity\EscapeRoomNew\App\</UnityWSASolutionDir>
-        <UnityProjectDir>C:\Users\Manuel\Documents\Unity\EscapeRoomNew\</UnityProjectDir>
-        <UnityWSAPlayerDir>C:\Users\Manuel\Documents\Unity\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
+        <UnityWSASolutionDir>C:\Users\Jendrik\Documents\GitHub\Mobile_Augmented_Reality\EscapeRoomNew\App\</UnityWSASolutionDir>
+        <UnityProjectDir>C:\Users\Jendrik\Documents\GitHub\Mobile_Augmented_Reality\EscapeRoomNew\</UnityProjectDir>
+        <UnityWSAPlayerDir>D:\2018.2.14f1\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
         <UnityWSAToolsDir>$(UnityWSASolutionDir)Unity\Tools\</UnityWSAToolsDir>
     </PropertyGroup>
 </Project>

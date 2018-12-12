@@ -1,0 +1,2 @@
+C:\Users\Jendrik\Documents\GitHub\Mobile_Augmented_Reality\EscapeRoomNew\UWP\EscapeRoomNew\EscapeRoomNew.csproj;x86
+C:\Users\Jendrik\Documents\GitHub\Mobile_Augmented_Reality\EscapeRoomNew\UWP\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86

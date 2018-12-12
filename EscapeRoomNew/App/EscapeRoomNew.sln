@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.8.28010.2050
+VisualStudioVersion = 15.9.28307.222
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EscapeRoomNew", "EscapeRoomNew\EscapeRoomNew.csproj", "{13A45C13-3265-47B8-BC48-A553B569DF55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "C:\Users\Manuel\Documents\Unity\EscapeRoomNew\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj", "{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "C:\Users\Jendrik\Documents\GitHub\Mobile_Augmented_Reality\EscapeRoomNew\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj", "{E63F3CC7-9E5F-407E-AB89-224CEE19E837}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,29 +47,29 @@ Global
 		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.ActiveCfg = Release|x86
 		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.Build.0 = Release|x86
 		{13A45C13-3265-47B8-BC48-A553B569DF55}.Release|x86.Deploy.0 = Release|x86
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Debug|ARM.ActiveCfg = Debug|ARM
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Debug|ARM.Build.0 = Debug|ARM
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Debug|x64.ActiveCfg = Debug|x64
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Debug|x64.Build.0 = Debug|x64
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Debug|x86.ActiveCfg = Debug|x86
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Debug|x86.Build.0 = Debug|x86
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Master|ARM.ActiveCfg = Master|ARM
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Master|ARM.Build.0 = Master|ARM
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Master|x64.ActiveCfg = Master|x64
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Master|x64.Build.0 = Master|x64
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Master|x86.ActiveCfg = Master|x86
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Master|x86.Build.0 = Master|x86
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Release|ARM.ActiveCfg = Release|ARM
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Release|ARM.Build.0 = Release|ARM
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Release|x64.ActiveCfg = Release|x64
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Release|x64.Build.0 = Release|x64
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Release|x86.ActiveCfg = Release|x86
-		{8CB43DFE-25F4-4DED-9E6C-67C67EF7C933}.Release|x86.Build.0 = Release|x86
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Debug|ARM.ActiveCfg = Debug|ARM
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Debug|ARM.Build.0 = Debug|ARM
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Debug|x64.ActiveCfg = Debug|x64
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Debug|x64.Build.0 = Debug|x64
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Debug|x86.ActiveCfg = Debug|x86
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Debug|x86.Build.0 = Debug|x86
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Master|ARM.ActiveCfg = Master|ARM
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Master|ARM.Build.0 = Master|ARM
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Master|x64.ActiveCfg = Master|x64
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Master|x64.Build.0 = Master|x64
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Master|x86.ActiveCfg = Master|x86
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Master|x86.Build.0 = Master|x86
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Release|ARM.ActiveCfg = Release|ARM
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Release|ARM.Build.0 = Release|ARM
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Release|x64.ActiveCfg = Release|x64
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Release|x64.Build.0 = Release|x64
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Release|x86.ActiveCfg = Release|x86
+		{E63F3CC7-9E5F-407E-AB89-224CEE19E837}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {52569F89-DD3C-42CB-8D49-10ACB946EC58}
+		SolutionGuid = {18E1CD54-8226-4400-A253-7530F43C3F61}
 	EndGlobalSection
 EndGlobal

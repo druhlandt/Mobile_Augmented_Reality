@@ -7,6 +7,8 @@ TagManager:
   - FuseBox
   - FuseInventory
   - Fuse
+  - Box
+  - Pad
   layers:
   - Default
   - TransparentFX

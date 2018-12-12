@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using HoloToolkit.Unity;
 using UnityEngine;
+using HoloToolkit.Unity.SpatialMapping;
 
 public class ObjectPlacer : MonoBehaviour
 {
@@ -18,12 +19,21 @@ public class ObjectPlacer : MonoBehaviour
     private bool _timeToHideMesh;
     private BoxDrawer _boxDrawing;
 
-    private GameController gc;
+    private bool boxInstanciated;
+    private bool padInstanciated;
+    private bool isPlacingStarted;
+
+    public GameObject gameController;
+    public GameObject boxPrefab;
+    public GameObject padPrefab;
+
+    private GameObject box;
+    private GameObject pad;
 
     // Use this for initialization
     void Start()
     {
-        gc = GetComponent<GameController>();
+        //gc = GetComponent<GameController>();
 
         if (DrawDebugBoxes)
         {
@@ -48,6 +58,47 @@ public class ObjectPlacer : MonoBehaviour
             _boxDrawing.UpdateBoxes(_lineBoxList);
         }
 
+        if (!gameController.activeSelf && isPlacingStarted)
+        {
+            if (!boxInstanciated)
+            {
+                box = PlaceObject(boxPrefab);
+                boxInstanciated = true;
+            }
+            
+            if(box && !padInstanciated)
+            {
+                if (!box.GetComponent<TapToPlace>().IsBeingPlaced)
+                {
+                    pad = PlaceObject(padPrefab);
+                    padInstanciated = true;
+                }
+            }
+
+            if (box && !pad.GetComponent<TapToPlace>().IsBeingPlaced)
+            {
+                pad.GetComponent<TapToPlace>().enabled = false;
+                box.GetComponent<TapToPlace>().enabled = false;
+                gameController.GetComponent<GameController>().box = box;
+                gameController.GetComponent<GameController>().doorlock = pad;
+                gameController.SetActive(true);
+            }
+         }
+
+    }
+
+    private GameObject PlaceObject(GameObject go)
+    {
+        Vector3 playerPos = Camera.main.transform.position;
+        Vector3 playerDirection = Camera.main.transform.forward;
+        Quaternion playerRotation = Camera.main.transform.rotation;
+        float spawnDistance = 1.8f;
+
+        Vector3 spawnPos = playerPos + playerDirection * spawnDistance;
+       
+        GameObject spawned = Instantiate(go, spawnPos, playerRotation);
+
+        return spawned;
     }
 
     private void HideGridEnableOcclulsion()
@@ -66,13 +117,18 @@ public class ObjectPlacer : MonoBehaviour
         SpatialUnderstandingDllObjectPlacement.Solver_Init();
 
         SpatialUnderstandingState.Instance.SpaceQueryDescription = "Generating World";
+        _timeToHideMesh = true;
+        isPlacingStarted = true;
 
+
+        //Ab HIER alles weg machen und Objekte über Tap to Place plazieren. In Update wenn GameController !isActive, !boxplaced, !pincodeplaced (pincode taptoplace abschalten)
+        /*
         List<PlacementQuery> queries = new List<PlacementQuery>();
 
         if (DrawBuildings)
         {
             queries.AddRange(AddBuildings());
-            gc.StartPauseTimer();
+            //gc.StartPauseTimer();
         }
 
         if (DrawTrees)
@@ -81,6 +137,7 @@ public class ObjectPlacer : MonoBehaviour
         }
 
         GetLocationsFromSolver(queries);
+        */
     }
 
     public List<PlacementQuery> AddBuildings()

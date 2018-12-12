@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using HoloToolkit.Unity.InputModule;
+using System;
 
-public class FuseController : MonoBehaviour
+public class FuseController : MonoBehaviour, IInputClickHandler
 {
     #region Fuse Controlls
     [SerializeField] public FusePuzzle fusePuzzle;
@@ -151,5 +153,10 @@ public class FuseController : MonoBehaviour
         }
 
         #endregion
+    }
+
+    public void OnInputClicked(InputClickedEventData eventData)
+    {
+        CheckFuseBox();
     }
 }

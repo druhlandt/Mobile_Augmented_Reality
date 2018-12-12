@@ -48,7 +48,7 @@
     <indexer-config type="PRI" />
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
-  <index root="obj\x86\Release\x86\Release" startIndexAt="embed.resfiles">
+  <index root="obj\x86\Release\x86\Release\embed" startIndexAt="embed.resfiles">
     <default>
       <qualifier name="Language" value="en-US" />
       <qualifier name="Contrast" value="standard" />
