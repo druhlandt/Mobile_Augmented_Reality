@@ -542,7 +542,7 @@ f63de675a7247ac274413082538197d4 Assembly-CSharp.dll:HoloToolkit.Examples.Protot
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.DictationInputManager
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:HoloToolkit.Examples.LevelManager
 0dd0a8709c30d6e6521a0d6f94054de0 Assembly-CSharp.dll:HoloToolkit.UX.Dialog.DialogShell
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.FuseCollission
+c169574d0aef779e63cccf464c254261 Assembly-CSharp.dll:.FuseCollission
 979d7f852128c8eb58caf7171dfd7ed5 Assembly-CSharp.dll:HoloToolkit.Examples.InteractiveElements.TextureThemeWidget
 4b71d946f84750c128c673908b02548a Assembly-CSharp.dll:.FuseController
 9ecf8e66a4fb631833f0117811c2e874 Assembly-CSharp.dll:HoloToolkit.Unity.SolverBodyLock

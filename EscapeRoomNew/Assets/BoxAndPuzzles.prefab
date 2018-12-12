@@ -715,6 +715,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4804954300096056}
+  - component: {fileID: 65758876718638182}
+  - component: {fileID: 114935016236340288}
+  - component: {fileID: 114182498776499094}
   m_Layer: 0
   m_Name: BoxAndPuzzles
   m_TagString: Untagged
@@ -1243,7 +1246,7 @@ GameObject:
   - component: {fileID: 114931940079135990}
   m_Layer: 0
   m_Name: boxV3
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4039,7 +4042,7 @@ Transform:
   m_GameObject: {fileID: 1306905412905072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 4889561501350658}
   - {fileID: 4720458213881500}
@@ -7873,6 +7876,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 10, z: 5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65758876718638182
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306905412905072}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65774664074932352
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -9410,6 +9425,23 @@ MonoBehaviour:
   monitor1: {fileID: 2100000, guid: dfc59230fc03e8e4aac41375c006e519, type: 2}
   monitor2: {fileID: 2100000, guid: c8b501c7d594f2b48855906bd4f2caac, type: 2}
   gamePause: 0
+--- !u!114 &114182498776499094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306905412905072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12f64a7e6f461aa409b8322f413f96b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultGazeDistance: 2
+  PlaceParentOnTap: 0
+  ParentGameObjectToPlace: {fileID: 0}
+  IsBeingPlaced: 1
+  AllowMeshVisualizationControl: 1
+  UseColliderCenter: 0
 --- !u!114 &114216441897591958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9861,6 +9893,26 @@ MonoBehaviour:
   - {fileID: 1151734641997156}
   - {fileID: 1576211141672678}
   - {fileID: 1301310644780298}
+--- !u!114 &114935016236340288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1306905412905072}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb69de839bd015f4099b5bd2c45e53e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseUnscaledTime: 1
+  PositionPerSecond: 30
+  RotationDegreesPerSecond: 720
+  RotationSpeedScaler: 0
+  ScalePerSecond: 5
+  SmoothLerpToTarget: 0
+  SmoothPositionLerpRatio: 0.5
+  SmoothRotationLerpRatio: 0.5
+  SmoothScaleLerpRatio: 0.5
 --- !u!114 &114972350525084712
 MonoBehaviour:
   m_ObjectHideFlags: 1
