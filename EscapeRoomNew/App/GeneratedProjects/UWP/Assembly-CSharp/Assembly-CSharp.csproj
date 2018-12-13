@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{060C84DC-035B-48A4-86DE-4DB49F4E65D2}</ProjectGuid>
+    <ProjectGuid>{840FA77A-0040-47A5-9998-D468D63156F2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyCSharpWSA</RootNamespace>
@@ -2601,6 +2601,12 @@
     <Compile Include="$(UnityProjectDir)Assets\Scripts\QuitGame.cs">
       <Link>Scripts\QuitGame.cs</Link>
     </Compile>
+    <Compile Include="$(UnityProjectDir)Assets\Scripts\Receiver.cs">
+      <Link>Scripts\Receiver.cs</Link>
+    </Compile>
+    <Compile Include="$(UnityProjectDir)Assets\Scripts\ReceiverPinPad.cs">
+      <Link>Scripts\ReceiverPinPad.cs</Link>
+    </Compile>
     <Compile Include="$(UnityProjectDir)Assets\Scripts\ResizePanel.cs">
       <Link>Scripts\ResizePanel.cs</Link>
     </Compile>
@@ -2612,6 +2618,9 @@
     </Compile>
     <Compile Include="$(UnityProjectDir)Assets\Scripts\ScrollDetailTexture.cs">
       <Link>Scripts\ScrollDetailTexture.cs</Link>
+    </Compile>
+    <Compile Include="$(UnityProjectDir)Assets\Scripts\SetCameraOnRuntime.cs">
+      <Link>Scripts\SetCameraOnRuntime.cs</Link>
     </Compile>
     <Compile Include="$(UnityProjectDir)Assets\Scripts\ShapeFinder.cs">
       <Link>Scripts\ShapeFinder.cs</Link>

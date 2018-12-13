@@ -79,6 +79,8 @@ public class ObjectPlacer : MonoBehaviour
             {
                 pad.GetComponent<TapToPlace>().enabled = false;
                 box.GetComponent<TapToPlace>().enabled = false;
+                pad.GetComponent<BoxCollider>().enabled = false;
+                box.GetComponent<BoxCollider>().enabled = false;
                 gameController.GetComponent<GameController>().box = box;
                 gameController.GetComponent<GameController>().doorlock = pad;
                 gameController.SetActive(true);

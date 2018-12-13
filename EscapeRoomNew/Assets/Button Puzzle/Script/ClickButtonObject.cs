@@ -8,7 +8,7 @@ public class ClickButtonObject : MonoBehaviour
     public int clickIndex = 0;
     public ButtonPuzzle buttonPuzzle;
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         buttonPuzzle.ClickButton(clickIndex);
     }

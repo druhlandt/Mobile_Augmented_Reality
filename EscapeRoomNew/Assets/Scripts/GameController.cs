@@ -53,6 +53,7 @@ public class GameController : MonoBehaviour {
     void Start () {
         box = GameObject.FindGameObjectWithTag("Box");
         doorlock = GameObject.FindGameObjectWithTag("Pad");
+        
         MakeSolution();
         //VoiceOver Ansage 1
         //SpawnBox();
@@ -67,7 +68,7 @@ public class GameController : MonoBehaviour {
         bStart = win = pause = false;
 
         keywords.Add("Next", () => {
-            StartNextPuzzle(); //NEIN!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            StartNextPuzzle(); //&&solvedPuzzles.Length == 2
         });
 
         keywords.Add("Pause", () => {
@@ -88,13 +89,14 @@ public class GameController : MonoBehaviour {
 
         keywords.Add("Move box", () => {
             box.GetComponentInParent<TapToPlace>().enabled = true;
+            box.GetComponentInParent<BoxCollider>().enabled = true;
         });
 
         keywords.Add("Stop moving box", () => {
             box.GetComponentInParent<TapToPlace>().enabled = false;
+            box.GetComponentInParent<BoxCollider>().enabled = false;
         });
-
-        //KEYWORD UM TAPTOPLACE AN BOX AN UND AUS ZU SCHALTEN
+        
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
         keywordRecognizer.OnPhraseRecognized += KeywordReconizeOnPhraseReconized;
         keywordRecognizer.Start();
@@ -134,7 +136,7 @@ public class GameController : MonoBehaviour {
         int sec = (int)((currentTime) % 60);
         if (sec != tmpSec && bStart)
         {
-            sc.PlayClip(sc.secBeep);
+            doorlock.GetComponent<PinCodeControl>().PlaySecBeep();
             tmpSec = sec;
         }
         if (sec > 9)
@@ -151,24 +153,12 @@ public class GameController : MonoBehaviour {
     {
         doorlock.GetComponent<PinCodeControl>().UpdateText(getTime());
         bStart = !bStart;
-        //sc.PlayClip(sc.start);
+        sc.PlayClip(sc.start);
     }
 
     private void GameOver()
     {
         //TODO GameOver Screen, Optionen zum Neustart
-    }
-
-    private void SpawnBox()
-    {
-        box.gameObject.SetActive(true);
-    }
-
-    private void SpawnLock()
-    {
-        doorlock.gameObject.SetActive(true);
-        doorlock.GetComponent<PinCodeControl>().SetCode(solution.ToString());
-        StartPauseTimer();
     }
 
     public void StartNextPuzzle()//hiermit starten
@@ -210,10 +200,6 @@ public class GameController : MonoBehaviour {
                 GameOver();
                 sc.PlayClip(sc.gameOver);
             }
-        }
-        else
-        {
-            //Hier kann was mit gewiinen hin
         }
     }
 

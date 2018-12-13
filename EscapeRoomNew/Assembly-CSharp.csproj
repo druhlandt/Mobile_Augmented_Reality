@@ -796,10 +796,13 @@
      <Compile Include="Assets\Scripts\PlacementResults.cs" />
      <Compile Include="Assets\Scripts\Puzzle.cs" />
      <Compile Include="Assets\Scripts\QuitGame.cs" />
+     <Compile Include="Assets\Scripts\Receiver.cs" />
+     <Compile Include="Assets\Scripts\ReceiverPinPad.cs" />
      <Compile Include="Assets\Scripts\ResizePanel.cs" />
      <Compile Include="Assets\Scripts\SceneDesignManager.cs" />
      <Compile Include="Assets\Scripts\SceneEntityManager.cs" />
      <Compile Include="Assets\Scripts\ScrollDetailTexture.cs" />
+     <Compile Include="Assets\Scripts\SetCameraOnRuntime.cs" />
      <Compile Include="Assets\Scripts\ShapeFinder.cs" />
      <Compile Include="Assets\Scripts\ShowSliderValue.cs" />
      <Compile Include="Assets\Scripts\SoundController.cs" />

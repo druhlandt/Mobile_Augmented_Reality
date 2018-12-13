@@ -12,7 +12,7 @@ public class ButtonAction : MonoBehaviour {
 		myButtonSound = gameObject.GetComponent<AudioSource> ();
 	}
 
-	void OnMouseDown() {
+	public void OnMouseDown() {
 		// send my input to the code controller
 		myCodeController.addKeyInput (ButtonValue);
 		myButtonSound.Play ();

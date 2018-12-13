@@ -9,6 +9,12 @@ TagManager:
   - Fuse
   - Box
   - Pad
+  - FuseInventoryCanvas
+  - Switch
+  - ButtonBoard
+  - ButtonBoardReset
+  - PinLockButton
+  - ElectricWave
   layers:
   - Default
   - TransparentFX

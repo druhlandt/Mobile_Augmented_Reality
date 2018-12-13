@@ -6,9 +6,15 @@ using UnityEngine;
 public class ResetButton : MonoBehaviour
 {
     public ButtonPuzzle buttonPuzzle;
+    private GameObject gc;
 
-    void OnMouseDown()
+    void Start() {
+        gc = GameObject.FindGameObjectWithTag("GameController");
+    }
+
+    public void OnMouseDown()
     {
+        gc.GetComponent<GameController>().PuzzleFail();
         buttonPuzzle.Setup();
     }
 }

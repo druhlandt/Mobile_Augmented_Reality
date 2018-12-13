@@ -35,9 +35,7 @@ public class PinCodeControl : MonoBehaviour {
 
 	// settings - change it to your desire
 	public string lockCode = "1234";			// the code to unlock
-	public int maxAttempts = 3;					// attempts until alert
 	public string controlCode = "0815";			// input code to allow the player to change the code
-	public float LockDownTime = 10.0f;			// amount of seconds to lock after failed attempts
 
 	public string DisplayDefault = "IDLE";		// text to display in IDLE mode
 	public string DisplayGranted = "UNLOCKED";	// text to display for access granted
@@ -48,17 +46,19 @@ public class PinCodeControl : MonoBehaviour {
 	// audio soundsources
 	public AudioSource AudioDenied;
 	public AudioSource AudioConfirm;
-	public bool noAudio = true;					// disable playing audiosources
+    public AudioSource AudioSecBeep;
+    public bool noAudio = true;					// disable playing audiosources
 
 	// local minions - you can leave those
 	private string inputCode;
 	private int failedAttempts;
 	private bool setNewCode;
 	private bool allowNewCode;
-	private float lockDownStartTime;
-	private bool lockDownActive;
 	private const string ctrlCodeSubmit = "SUBMIT";
 	private const string ctrlCodeClear = "CLEAR";
+    private bool lockDisplayForInput;
+    private float displayLockTime;
+    private float timeForDisplayLock = 5.0f;
 	
 
 	// Use this for initialization
@@ -70,38 +70,37 @@ public class PinCodeControl : MonoBehaviour {
 		failedAttempts = 0;
 		allowNewCode = false;
 		setNewCode = false;
-		lockDownActive = false;
 		UpdateText (DisplayDefault);
 	}
 	
 	// continous checks
 	void Update(){
-		// only run this if we are in lockdown mode
-		if (!lockDownActive)
-			return;
 
-		// reset lockdown after while
-		if (lockDownStartTime + LockDownTime <= Time.time) {
-			lockDownActive = false;
-			UpdateText(DisplayDefault);
-		} else {
-			float restTime = (lockDownStartTime + LockDownTime) - Time.time;
-			//string newText = ;
-			UpdateText(DisplayAlert + " " + Mathf.Floor (restTime).ToString());
-		}
+        if (lockDisplayForInput)
+        {
+            if (timeForDisplayLock + displayLockTime <= Time.time)
+                lockDisplayForInput = false;
+        }
 	}
 
 	// it's public because door hackers should be able to print special text onto the UI
 	public void UpdateText(string newText){
+        if (newText.Contains("min"))
+        {
+            if (lockDisplayForInput)
+                return;                
+        }
+
 		GameObjDisplayText.text = newText;
 	}
 
+    public void PlaySecBeep()
+    {
+        AudioSecBeep.Play();
+    }
+
 	// an input was made, add it to the input value
 	public void addKeyInput(string key){
-		if (lockDownActive) {
-			UpdateText(DisplayAlert);
-			return;
-		}
 
 		if (key.Equals (ctrlCodeSubmit)) {
 			submit();
@@ -115,11 +114,16 @@ public class PinCodeControl : MonoBehaviour {
 		}
 		inputCode += key;
 		UpdateText (inputCode);
+
+        lockDisplayForInput = true;
+        displayLockTime = Time.time;
 	}
 
 	// return was pressed, run checks now
 	public void submit(){
-		if (setNewCode) {
+        lockDisplayForInput = true;
+        displayLockTime = Time.time;
+        if (setNewCode) {
 			SetCode (inputCode);
 			clearInput();
 			setNewCode = false;
@@ -143,20 +147,13 @@ public class PinCodeControl : MonoBehaviour {
 		} else {
 			if(CheckCode() == false){
 				// failed attempt!
-				failedAttempts += 1;
 				allowNewCode = false;
 				UpdateText(DisplayDenied);
-				if(failedAttempts >= maxAttempts){
-					// alert!
-					UpdateText(DisplayAlert);
-					lockDownStartTime = Time.time;
-					lockDownActive = true;
-				}
+				
 				if(!noAudio)
 					AudioDenied.Play();
 			}else{
 				// grant access and reset attempt counter
-				failedAttempts = 0;
 				allowNewCode = true;
 				UpdateText(DisplayGranted);
 				if(!noAudio)
@@ -164,7 +161,8 @@ public class PinCodeControl : MonoBehaviour {
 			}
 		}
 		clearInput();
-	}
+        
+    }
 
 	// clear was pressed, reset input
 	public void clearInput(){

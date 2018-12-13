@@ -14,7 +14,7 @@ public class ClickButtonObject_Electric1 : MonoBehaviour
     {
     }
 
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         electric1.ClickButton(clickIndex);
     }
