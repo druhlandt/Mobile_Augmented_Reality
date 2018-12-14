@@ -1,6 +1,6 @@
 Metro
 PlayerPath?
-C:/Users/Jendrik/Documents/GitHub/Mobile_Augmented_Reality/EscapeRoomNew/App
+C:/Users/Manuel/Desktop/Mobile AR/Mobile_Augmented_Reality/EscapeRoomNew/App
 SceneListBegin?
 Assets/Scenes/Menu 3D.unity
 Assets/Scenes/Scene1.unity
@@ -291,6 +291,7 @@ c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15a5e31ef5b159b2e636e375fa610737 Assembly-CSharp.dll:HoloToolkit.Examples.Prototyping.ColorTransition
 4d883c11ea30bf331e3c1761b3701c61 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.Tests.ButtonTimedWaiter
+a29ae484136752212ae18216426d8be8 Assembly-CSharp.dll:.ReceiverPinPad
 d19dd30eefda914f814edc93d0f4cee0 Assembly-CSharp.dll:HoloToolkit.Unity.Buttons.ButtonSounds
 143b470d1a3394fc1511e3834d763ead Assembly-CSharp.dll:HoloToolkit.Examples.InteractiveElements.InteractiveWidgetEnabledTest
 de4609add83102ad3b12a803266db32c Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.SpeechInputSource
@@ -386,6 +387,7 @@ d88743fd8df1c505d8b6f35fb6b873b6 Assembly-CSharp.dll:HoloToolkit.UX.Progress.Pro
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:HoloToolkit.Unity.Boundary.Tests.BoundaryTest
 090d50d0bb0b74e6e5ebc4c4d306b92f Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.Tests.XboxControllerHandlerTest
 f14164d06dc3cbeea4084b2380cd0154 Assembly-CSharp.dll:.ElectricWave_GameSample
+f76acea6fd53106899a0e6e70bd43ee9 Assembly-CSharp.dll:.Receiver
 779e97e16660be39d6d758da78e9d02e Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.HandGuidance
 e8069624fa39554fc3053f8419f84c44 Assembly-CSharp.dll:HoloToolkit.Unity.StabilizationPlaneModifier
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:HoloToolkit.Unity.CalibrationSpace
@@ -400,6 +402,7 @@ fab90e9764a49bb4da8764c0096363cf Assembly-CSharp.dll:HoloToolkit.Examples.UX.Pro
 0a215a5f1adca753050c089d1d3ccf06 Assembly-CSharp.dll:HoloToolkit.Examples.Prototyping.ScaleByDistance
 c181390bd6658c0985dd3b454437e2e1 Assembly-CSharp.dll:HoloToolkit.Unity.InputModule.TouchscreenInputSource
 18f1769d6f75a0dfa093bbfec1330cf4 Assembly-CSharp.dll:HoloToolkit.Examples.InteractiveElements.GestureInteractiveControl
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.SetCameraOnRuntime
 05bd3fcb4b80d5d0df9dd8dffb457caf Assembly-CSharp.dll:HoloToolkit.Unity.SpatialMapping.SpatialMappingObserver
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:HoloToolkit.Sharing.Tests.RoomTest
 94477075625c94f5e944b649b10d3010 Assembly-CSharp.dll:HoloToolkit.Unity.Tagalong
@@ -691,6 +694,3 @@ c1087bf328bbb39eba5a09f26c3b6368 Vuforia.UnityExtensions.dll:Vuforia.MultiTarget
 c8a41ce4eea7677f6dd2aa0e422a2f04 Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 c31ff9acb65f7a15b5c6fd77c3314d83 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 486cd95c82d8305219c352c06b776e1f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
-f76acea6fd53106899a0e6e70bd43ee9 Assembly-CSharp.dll:.Receiver
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.SetCameraOnRuntime
-a29ae484136752212ae18216426d8be8 Assembly-CSharp.dll:.ReceiverPinPad
