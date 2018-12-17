@@ -36,6 +36,8 @@
     </Application>
   </Applications>
   <Capabilities>
+    <Capability Name="internetClientServer" />
+    <Capability Name="privateNetworkClientServer" />
     <uap2:Capability Name="spatialPerception" />
     <DeviceCapability Name="microphone" />
   </Capabilities>
@@ -58,10 +60,9 @@
     <build:Item Name="OptimizingToolset" Value="None" />
     <build:Item Name="TargetRuntime" Value="Managed" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="15.0.28307.102" />
-    <build:Item Name="WindowsMobile" Version="10.0.17134.0" />
-    <build:Item Name="WindowsDesktop" Version="10.0.17134.0" />
-    <build:Item Name="WindowsIoT" Version="10.0.17134.0" />
-    <build:Item Name="WindowsTeam" Version="10.0.17134.0" />
+    <build:Item Name="WindowsMobile" Version="10.0.17763.0" />
+    <build:Item Name="WindowsDesktop" Version="10.0.17763.0" />
+    <build:Item Name="WindowsTeam" Version="10.0.17763.0" />
     <build:Item Name="MakePri.exe" Version="10.0.17763.132 (WinBuild.160101.0800)" />
   </build:Metadata>
 </Package>

@@ -6,11 +6,11 @@
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
 EscapeRoomNew.sln: modified
-EscapeRoomNew\App.cs: modified
+EscapeRoomNew\App.cs: BE2B5E29FFA79C44C78D63CFC5290AC1
 EscapeRoomNew\AssemblyConverterArgs.txt: 344E29F82C64B9A1857509777DE1107C
-EscapeRoomNew\EscapeRoomNew.csproj: modified
+EscapeRoomNew\EscapeRoomNew.csproj: 48A88AE954221DB2D5E3E23CC709AFC3
 EscapeRoomNew\EscapeRoomNew.csproj.user: modified
-EscapeRoomNew\Package.appxmanifest: F18E1108936B238C3229313122C1F391
+EscapeRoomNew\Package.appxmanifest: AB75BCD1B0C9C6A2713F4EDE5C3403DE
 EscapeRoomNew\project.json: 1D02BC64BAC0D041019673A1C4C51737
 EscapeRoomNew\Assets\SplashScreen.scale-200.png: A85C1D7624B6902CF8CEBD6F0200A826
 EscapeRoomNew\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084

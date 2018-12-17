@@ -378,7 +378,7 @@
 
   <ItemGroup>
     <ProjectReference Include="C:\Users\Jendrik\Documents\GitHub\Mobile_Augmented_Reality\EscapeRoomNew\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj">
-      <Project>{fd599af2-5a3e-4360-91f2-9684a9e93bc3}</Project>
+      <Project>{cdce17f8-3a4e-4116-a942-b56261e687d4}</Project>
       <Name>Assembly-CSharp</Name>
       <Private>False</Private>
     </ProjectReference>

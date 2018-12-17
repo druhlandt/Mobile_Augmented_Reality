@@ -2802,9 +2802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameObjDisplayText: {fileID: 114510967541833678}
   lockCode: 1234
-  maxAttempts: 3
   controlCode: 0815
-  LockDownTime: 10
   DisplayDefault: IDLE
   DisplayGranted: UNLOCKED
   DisplayDenied: DENIED

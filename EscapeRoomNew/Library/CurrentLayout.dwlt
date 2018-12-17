@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 88
+  controlID: 35
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 89
+  controlID: 66
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 90
+  controlID: 67
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -281,10 +281,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 285.6
-    y: -771.2
-    width: 913
-    height: 364
+    x: 409
+    y: 92
+    width: 949
+    height: 478
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &13
 MonoBehaviour:
@@ -329,14 +329,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\Manuel\Desktop\Mobile AR\Mobile_Augmented_Reality\EscapeRoomNew
+  m_LastProjectPath: C:\Users\Jendrik\Documents\GitHub\Mobile_Augmented_Reality\EscapeRoomNew
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: f8550000
-    m_LastClickedID: 22008
-    m_ExpandedIDs: 00000000f85500008c570000b0580000c6590000ea60000010610000fa630000c864000008650000006c0000086c0000506c00008c6c0000906c0000d66c0000dc6d0000446e000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 16570000
+    m_LastClickedID: 22294
+    m_ExpandedIDs: 0000000016570000a8580000ca590000de5a0000fa6100002062000006650000d465000014660000006d0000086d0000506d00008c6d0000906d0000d66d0000dc6e0000426f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f85500008c570000c6590000ea60000092620000fa630000c864000008650000246800006c680000506c00008c6c0000906c0000dc6d0000446e0000
+    m_ExpandedIDs: 0000000016570000a8580000ca590000de5a0000fa6100002062000006650000d465000014660000006d0000086d0000506d00008c6d0000906d0000d66d0000dc6e0000426f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -482,7 +482,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: b8c8ffffc8c9ffffeeceffff72d0ffff66d6ffff78d7ffff9edcffff22deffffe8f8ffffeaf8ffffecf8ffff00000000287d0000
+    m_ExpandedIDs: 1ecafdffe6cafdff00d0fdff86d1fdff18dafdffe0dafdfffadffdff80e1fdff10e9fdff1ceafdff36effdffbcf0fdffe064fefff865feff126bfeff2a6bfeff52b1feff4ab2feffdeb2feffe2b2feff60c9feffd2d1feff84d2feff3aa9ffff30abffff46abffff02acffff10acffff3eacffffd2acfffff8d7ffff08d9ffff26deffffaadfffffbce5ffffcce6ffffeaebffff6eedffff46f5fffff4ffffff00000000847b0000807c00009c7c0000128500001c850000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -537,9 +537,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.15242273, y: 0.090680055, z: 2.1952076}
+    m_Target: {x: -0.017484367, y: 0.16308597, z: 2.1812735}
     speed: 2
-    m_Value: {x: -0.15242273, y: 0.090680055, z: 2.1952076}
+    m_Value: {x: -0.017484367, y: 0.16308597, z: 2.1812735}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -567,9 +567,9 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.04943264, y: -0.044024184, z: 0.002180977, w: -0.9978044}
+    m_Target: {x: -0.043302972, y: -0.09187527, z: 0.003999145, w: -0.9948205}
     speed: 2
-    m_Value: {x: -0.04943264, y: -0.044024184, z: 0.002180977, w: -0.9978044}
+    m_Value: {x: -0.043302972, y: -0.09187527, z: 0.003999145, w: -0.9948205}
   m_Size:
     m_Target: 1.0088409
     speed: 2
@@ -605,10 +605,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 341
+    x: 409
     y: 92
-    width: 1097
-    height: 500
+    width: 949
+    height: 478
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
@@ -620,10 +620,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -548.5
-    m_HBaseRangeMax: 548.5
-    m_VBaseRangeMin: -241.5
-    m_VBaseRangeMax: 241.5
+    m_HBaseRangeMin: -474.5
+    m_HBaseRangeMax: 474.5
+    m_VBaseRangeMin: -230.5
+    m_VBaseRangeMax: 230.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -641,25 +641,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1097
-      height: 483
+      width: 949
+      height: 461
     m_Scale: {x: 1.25, y: 1.25}
-    m_Translation: {x: 548.5, y: 241.5}
+    m_Translation: {x: 474.5, y: 230.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -438.8
-      y: -193.2
-      width: 877.6
-      height: 386.4
+      x: -379.6
+      y: -184.4
+      width: 759.2
+      height: 368.8
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1097, y: 500}
+  m_LastWindowPixelSize: {x: 949, y: 478}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -684,8 +684,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 617
-    width: 1426
-    height: 440
+    x: 0
+    y: 591
+    width: 1358
+    height: 427
   m_PersistentViewDataDictionary: {fileID: 0}
